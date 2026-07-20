@@ -86,7 +86,7 @@ const ResultComponent = ({ winner, human }) => {
         <div className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row">
           <Button
             onClick={handleReTry}
-            className="py-3 flex-1 rounded-2xl bg-cyan-500 text-lg font-semibold hover:bg-cyan-400"
+            className="py-3 sm:h-14 flex-1 rounded-2xl bg-cyan-500 text-lg font-semibold hover:bg-cyan-400"
           >
             <RotateCcw className="scale-150 mr-1" />
             Play Again
@@ -96,7 +96,7 @@ const ResultComponent = ({ winner, human }) => {
             onClick={() => {
               window.location.reload();
             }}
-            className="py-3 flex-1 bg-green-500 rounded-2xl text-lg font-semibold hover:bg-green-400"
+            className="py-3 sm:h-14 flex-1 bg-green-500 rounded-2xl text-lg font-semibold hover:bg-green-400"
           >
             <Home className="scale-150 mr-1" />
             Home
