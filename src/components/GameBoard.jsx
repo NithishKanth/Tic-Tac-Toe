@@ -188,7 +188,7 @@ const GameBoard = () => {
           <div
             key={index}
             ref={(el) => (itemsRef.current[index] = el)}
-            className={`text-white text-center size-[110px] ms:size-[150px] lg:size-[180px] relative cursor-pointer z-50`}
+            className={`text-white text-center size-[100px] ms:size-[150px] lg:size-[180px] relative cursor-pointer z-50`}
             onClick={() => {
               if (!playerTurn || !gameStarted) return;
               if (box != "") return;
