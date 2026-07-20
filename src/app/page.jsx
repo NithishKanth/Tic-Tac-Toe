@@ -5,9 +5,11 @@ import Selection from "@/components/Selection";
 import gameStore from "@/store/gameStore";
 import gsap from "gsap";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const page = () => {
+  const router = useRouter();
   const { handleGameStart, AI, human, gameStarted } = gameStore();
 
   const startTheGame = () => {
@@ -76,7 +78,12 @@ const page = () => {
             Start Game
           </button>
 
-          <button className="rounded-2xl border border-zinc-700 bg-zinc-900/60 px-8 py-4 text-lg font-medium text-white backdrop-blur-md transition-all duration-300 hover:border-cyan-400 hover:bg-zinc-800 cursor-pointer">
+          <button
+            onClick={() => {
+              router.push("https://github.com/NithishKanth/Tic-Tac-Toe");
+            }}
+            className="rounded-2xl border border-zinc-700 bg-zinc-900/60 px-8 py-4 text-lg font-medium text-white backdrop-blur-md transition-all duration-300 hover:border-cyan-400 hover:bg-zinc-800 cursor-pointer"
+          >
             Learn More
           </button>
         </div>
